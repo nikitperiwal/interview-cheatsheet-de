@@ -1,5 +1,4 @@
 from pyspark import StorageLevel
-from pyspark.sql.types import StringType
 from pyspark.sql.functions import *
 from pyspark.sql import SparkSession
 
@@ -8,7 +7,7 @@ from pyspark.sql import SparkSession
 
 # Initialize SparkSession with additional configurations for local run
 spark = SparkSession.builder \
-    .appName("StudentCSVAnalysis") \
+    .appName("Spark-Transformations-Cheatsheet") \
     .config("spark.master", "local[*]") \
     .config("spark.driver.memory", "1g") \
     .config("spark.executor.memory", "2g") \
@@ -45,12 +44,13 @@ c1 = student_df.coalesce(2)
 # ---------------------------------------------------------------------------------------------------------------------
 # TRANSFORMATIONS
 
-# Perform filtering and selection
+# Perform filtering and selection and dropping duplicate
 filtered_students = student_df \
     .select("Student ID", "Name", "Address", "Grades", "DOB") \
     .filter("Grades is not NULL") \
     .filter("DOB not like '2014-%'") \
     .filter(student_df["Student ID"] <= 200) \
+    .dropDuplicates() \
     .limit(100)
 
 # Create new column "Name" by concatenating first and last names
@@ -88,10 +88,10 @@ students_df = students_df.withColumn("Suffix_Name", concat(col("Name"), lit("_st
 # Drop unnecessary columns
 students_df = students_df.drop("Random", "Suffix_Name", "Name_Length")
 
-students_df = students_df.orderBy("Student Id", ascending=False)
-
-# Show the Dataframe
-students_df.show(10, truncate=False)
+# OrderBy and Show
+students_df \
+    .orderBy("Age", "Student Id", ascending=False) \
+    .show(10)
 
 # ---------------------------------------------------------------------------------------------------------------------
 # COMPLEX DATA TRANSFORMATIONS - STRUCTS
@@ -146,6 +146,7 @@ min_grade.show()
 max_grade = student_df.select("Student ID", "Name", "Grades", array_max("Grades").alias("Max_Grade"))
 max_grade.show()
 
+
 # ---------------------------------------------------------------------------------------------------------------------
 # UDFs (User Defined Functions)
 
@@ -155,7 +156,7 @@ def udf_function(arg):
 
 
 udf_func = udf(udf_function, StringType())
-udf_result = student_df.withColumn("New_Column", udf_func(col("Student ID")))
+udf_result = student_df.withColumn("UDF_COLUMN", udf_func(col("Student ID")))
 udf_result.show()
 
 # ---------------------------------------------------------------------------------------------------------------------

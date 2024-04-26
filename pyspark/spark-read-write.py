@@ -7,7 +7,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # ---------------------------------------------------------------------------------------------------------------------
-# READING
+# READING DATA
 
 # Read CSV file into a DataFrame
 csv_df = spark.read \

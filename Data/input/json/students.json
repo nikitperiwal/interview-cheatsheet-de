@@ -1,0 +1,12 @@
+{"Student ID": 101, "Name": "John Doe", "DOB": "2007-01-01", "Grades": [90, 85, 95], "Address": {"city": "New York", "state": "NY"}},
+{"Student ID": 102, "Name": "Jane Smith", "DOB": "2008-01-01", "Grades": [88, 92, 90], "Address": {"city": "Los Angeles", "state": "CA"}},
+{"Student ID": 103, "Name": "Bob Johnson", "DOB": "2007-01-01", "Grades": [75, 80, 78], "Address": {"city": "Chicago", "state": "IL"}},
+{"Student ID": 104, "Name": "Alice Williams", "DOB": "2008-01-01", "Grades": [92, 95, 90], "Address": {"city": "Houston", "state": "TX"}},
+{"Student ID": 105, "Name": "David Brown", "DOB": "2007-01-01", "Grades": [85, 88, 86], "Address": {"city": "Philadelphia", "state": "PA"}},
+{"Student ID": 106, "Name": "Emily Jones", "DOB": "2008-01-01", "Grades": [78, 82, 80], "Address": {"city": "Phoenix", "state": "AZ"}},
+{"Student ID": 107, "Name": "Michael Miller", "DOB": "2007-01-01", "Grades": [89, 92, 91], "Address": {"city": "San Antonio", "state": "TX"}},
+{"Student ID": 108, "Name": "Sophia Davis", "DOB": "2008-01-01", "Grades": [93, 95, 94], "Address": {"city": "San Diego", "state": "CA"}},
+{"Student ID": 109, "Name": "James Wilson", "DOB": "2007-01-01", "Grades": [80, 85, 82], "Address": {"city": "Dallas", "state": "TX"}},
+{"Student ID": 110, "Name": "Olivia Taylor", "DOB": "2008-01-01", "Grades": [91, 94, 92], "Address": {"city": "San Jose", "state": "CA"}},
+{"Student ID": 111, "Name": "William Anderson", "DOB": "2007-01-01", "Grades": [84, 88, 86], "Address": {"city": "Austin", "state": "TX"}},
+{"Student ID": 112, "Name": "Isabella Thomas", "DOB": "2008-01-01", "Grades": [87, 90, 88], "Address": {"city": "Jacksonville", "state": "FL"}}

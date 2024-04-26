@@ -1,6 +1,5 @@
-from pyspark.sql.types import *
-from pyspark.sql.functions import *
 from pyspark.sql import SparkSession
+from pyspark.sql.types import *
 
 # Initialize SparkSession with additional configurations for local run
 spark = SparkSession.builder \
@@ -52,3 +51,5 @@ df.show()
 
 # Stop the SparkSession
 spark.stop()
+
+# ---------------------------------------------------------------------------------------------------------------------

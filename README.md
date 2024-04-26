@@ -14,6 +14,18 @@
 - [Maximizing Spark Performance: Minimizing Shuffle Overhead](https://python.plainenglish.io/maximizing-spark-performance-minimizing-shuffle-overhead-e21b7a4e5e71)
 - [Handling Data Skew in Apache Spark](https://medium.com/@suffyan.asad1/handling-data-skew-in-apache-spark-techniques-tips-and-tricks-to-improve-performance-e2934b00b021)
 
+### File Formats
+
+- [ORC]()
+- Image/Unstructured storage - blob, object storage.
+
+
+### System Design
+
+- [System Design]()
+- Data modelling; schema - snowflake star etc; Normalisation
+
+
 ### PySpark - Cheatsheet
 
 #### Spark-Sql
@@ -27,7 +39,3 @@
 #### Spark-Streaming
 
 - [Streaming read/write](pyspark/spark-streaming.py)
-
-### System Design
-
-- 

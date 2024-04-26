@@ -1,6 +1,5 @@
-from pyspark import StorageLevel
-from pyspark.sql.functions import *
 from pyspark.sql import SparkSession, Window
+from pyspark.sql.functions import *
 
 # ---------------------------------------------------------------------------------------------------------------------
 # INIT CODE
@@ -12,7 +11,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # Read CSV file into a DataFrame
-student_df = spark.read.json("../Data/input/json/base.json")
+student_df = spark.read.json("../Data/input/json/students.json")
 student_df = student_df.withColumn("Age", lit(2024) - year("DOB"))
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -26,21 +25,48 @@ grouped_df.show()
 student_df.groupBy("Grade").agg({
     "Student ID": "max",
     "Age": "avg",
-    "Grade": "count"
+    "Grade": "sum"
 }).show()
+
+# Collect list of student names for each grade
+list_df = student_df.groupBy("Grade").agg(collect_list("Address.state").alias("Student_Names_List"))
+list_df.show(truncate=False)
+
+# Collect set of unique student names for each grade
+set_df = student_df.groupBy("Grade").agg(collect_set("Address.state").alias("Student_Names_Set"))
+set_df.show(truncate=False)
 
 # ---------------------------------------------------------------------------------------------------------------------
 # WINDOW FUNCTIONS
 
-# Find the second-oldest person in each grade?
-windowSpec = Window.partitionBy("Grade").orderBy(desc("DOB"))
+windowSpec = Window.partitionBy("Grade").orderBy(desc("Age"))
+
+# ROW_NUMBER, RANK, DENSE_RANK on Window
 student_df \
-    .withColumn("Year_Rank", dense_rank().over(windowSpec)) \
-    .filter("Year_Rank == 2") \
+    .withColumn("Rank", rank().over(windowSpec)) \
+    .withColumn("Dense_Rank", dense_rank().over(windowSpec)) \
+    .withColumn("Row_Number", row_number().over(windowSpec)) \
+    .filter("Grade == 10") \
     .show()
 
-# Difference of student grade with the max grade
-windowSpec = Window.partitionBy("Grade")
-student_df \
-    .withColumn("Grade_diff", max(col("Student ID")).over(windowSpec) - col("Student ID")) \
-    .show()
+# MAX, MIN, AVG, COUNT on Window
+max_df = student_df.withColumn("Grade_diff", max(col("Student ID")).over(windowSpec) - col("Student ID"))
+max_df.show()
+
+# LAG: Find the previous student in each grade based on age
+lag_df = student_df.withColumn("Previous_Student", lag("Name", 1).over(windowSpec))
+lag_df.show()
+
+# LEAD: Find the next student in each grade based on age
+lead_df = student_df.withColumn("Next_Student", lead("Name", 1).over(windowSpec))
+lead_df.show()
+
+# NTILE: Divide students into quartiles based on age within each grade
+ntile_df = student_df.withColumn("Age_Quartile", ntile(4).over(windowSpec))
+ntile_df.show()
+
+# Find the second-oldest person in each grade?
+row_number_df = student_df.withColumn("Year_Rank", row_number().over(windowSpec)).filter("Year_Rank == 2")
+row_number_df.show()
+
+# ---------------------------------------------------------------------------------------------------------------------

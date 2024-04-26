@@ -1,6 +1,6 @@
 from pyspark import StorageLevel
-from pyspark.sql.functions import *
 from pyspark.sql import SparkSession
+from pyspark.sql.functions import *
 
 # ---------------------------------------------------------------------------------------------------------------------
 # INIT CODE
@@ -46,8 +46,8 @@ c1 = student_df.coalesce(2)
 
 # Perform filtering and selection and dropping duplicate
 filtered_students = student_df \
-    .select("Student ID", "Name", "Address", "Grades", "DOB") \
-    .filter("Grades is not NULL") \
+    .select("Student ID", "Name", "Address", "Marks", "DOB") \
+    .filter("Marks is not NULL") \
     .filter("DOB not like '2014-%'") \
     .filter(student_df["Student ID"] <= 200) \
     .dropDuplicates() \
@@ -60,7 +60,7 @@ students_df = filtered_students.withColumn("Random", concat("Name", lit(" "), "S
 students_df = students_df.withColumn("Age", lit(2024) - year("DOB"))
 
 # Rename the "Grade" column to "Student_Grade"
-students_df = students_df.withColumnRenamed("Grades", "Student_Grade")
+students_df = students_df.withColumnRenamed("Marks", "Student_Grade")
 
 # Replace NULL values in "Student_Grade" with a default value
 students_df = students_df.fillna({"Student ID": "100"})
@@ -126,24 +126,24 @@ nested_struct_df.show(truncate=False)
 # ---------------------------------------------------------------------------------------------------------------------
 # COMPLEX DATA TRANSFORMATIONS - ARRAYS
 
-# Explode the "Grades" array column
-exploded_df = student_df.select("Student ID", "Name", explode("Grades").alias("Grade"))
+# Explode the "Marks" array column
+exploded_df = student_df.select("Student ID", "Name", explode("Marks").alias("Grade"))
 exploded_df.show()
 
 # Create a single array from an array of arrays
-# flattened_df = student_df.select("Student ID", "Name", flatten("Grades").alias("Grade"))
+# flattened_df = student_df.select("Student ID", "Name", flatten("Marks").alias("Grade"))
 # flattened_df.show()
 
-# Reduce the "Grades" array column to calculate the sum
+# Reduce the "Marks" array column to calculate the sum
 reduced_df = exploded_df.groupby("Student ID").sum("Grade")
 reduced_df.show()
 
-# Find the minimum grade in the "Grades" array column
-min_grade = student_df.select("Student ID", "Name", "Grades", array_min("Grades").alias("Min_Grade"))
+# Find the minimum grade in the "Marks" array column; Adding sort just because
+min_grade = student_df.select("Student ID", "Name", "Marks", array_min(array_sort("Marks", reverse=True)))
 min_grade.show()
 
-# Find the maximum grade in the "Grades" array column
-max_grade = student_df.select("Student ID", "Name", "Grades", array_max("Grades").alias("Max_Grade"))
+# Find the maximum grade in the "Marks" array column
+max_grade = student_df.select("Student ID", "Name", "Marks", array_max("Marks").alias("Max_Grade"))
 max_grade.show()
 
 

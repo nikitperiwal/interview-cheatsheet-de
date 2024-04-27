@@ -15,7 +15,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # Read CSV file into a DataFrame
-student_df = spark.read.json("../Data/input/json/")
+student_df = spark.read.json("../Data/input/json/students.json")
 
 # ---------------------------------------------------------------------------------------------------------------------
 # COMMON FUNCTIONS

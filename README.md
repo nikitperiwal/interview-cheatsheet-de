@@ -1,5 +1,10 @@
 # Cheatsheet for Data Engineering
 
+### DSA and Coding - For interviews
+
+- [Neetcode.io](https://neetcode.io/roadmap)
+- [Python Cheat Sheet](https://leetcode.com/discuss/study-guide/2122306/Python-Cheat-Sheet-for-Leetcode)
+
 ### Spark Architecture
 
 - [Spark Developer Certification - Comprehensive Study Guide](resources/PySpark+Architecture.pdf)
@@ -16,15 +21,16 @@
 
 ### File Formats
 
-- [ORC]()
-- Image/Unstructured storage - blob, object storage.
-
+- Indepth - Avro, Parquet, Orc (Orc splits)
+- Pros/Cons - Delta Lake, Iceberg, Hudi
+- What is? Blob, object storage. Offerings in Cloud?
+- What to use? Image/Unstructured storage
 
 ### System Design
 
-- [System Design]()
-- Data modelling; schema - snowflake star etc; Normalisation
-
+- Data modelling
+- Schema - Snowflake, Star, etc
+- Normalisation
 
 ### PySpark - Cheatsheet
 

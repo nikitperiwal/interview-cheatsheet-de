@@ -45,7 +45,7 @@ csv_df \
 csv_df \
     .write \
     .format("orc") \
-    .partitionBy("Grade") \
+    .partitionBy("STUDENT_ID") \
     .mode("overwrite") \
     .save("../Data/output/orc")
 

@@ -23,7 +23,7 @@ grouped_df.show()
 
 # Using agg function to calculate multiple aggregates
 student_df.groupBy("Grade").agg({
-    "Student ID": "max",
+    "ID": "max",
     "Age": "avg",
     "Grade": "sum"
 }).show()
@@ -38,7 +38,6 @@ set_df.show(truncate=False)
 
 # ---------------------------------------------------------------------------------------------------------------------
 # WINDOW FUNCTIONS
-# ROWS_BETWEEN and RANGE_BETWEEN - ADD
 
 windowSpec = Window.partitionBy("Grade").orderBy(desc("Age"))
 
@@ -51,7 +50,7 @@ student_df \
     .show()
 
 # MAX, MIN, AVG, COUNT on Window
-max_df = student_df.withColumn("Grade_diff", max(col("Student ID")).over(windowSpec) - col("Student ID"))
+max_df = student_df.withColumn("Grade_diff", max(col("ID")).over(windowSpec) - col("ID"))
 max_df.show()
 
 # LAG: Find the previous student in each grade based on age
@@ -69,5 +68,11 @@ ntile_df.show()
 # Find the second-oldest person in each grade?
 row_number_df = student_df.withColumn("Year_Rank", row_number().over(windowSpec)).filter("Year_Rank == 2")
 row_number_df.show()
+
+# Find the rolling average of age
+windowSpec = Window.orderBy("Age").rowsBetween(start=Window.unboundedPreceding, end=0)
+student_df.withColumn("Average_Age", avg("Age").over(windowSpec)).show()
+
+# TODO: Add RANGE_BETWEEN
 
 # ---------------------------------------------------------------------------------------------------------------------

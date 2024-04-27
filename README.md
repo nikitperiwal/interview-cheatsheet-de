@@ -41,6 +41,7 @@
 - [Transformations](pyspark/spark-transformations.py)
 - [Joins and Sets](pyspark/spark-joins-sets.py)
 - [Group-by, Aggregates and Window functions](pyspark/spark-window-groupby.py)
+- [SQL Queries on PySpark](pyspark/spark-queries.py)
 
 #### Spark-Streaming
 

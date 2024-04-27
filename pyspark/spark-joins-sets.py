@@ -80,7 +80,7 @@ print("Left Anti Join Count:", left_anti_join.count())
 left_anti_join.show()
 
 # Broadcast join
-merged_students = df1.join(broadcast(df2), on="Grade", how="left")
+merged_students = df1.join(broadcast(df2), on="ID", how="left")
 
 # ---------------------------------------------------------------------------------------------------------------------
 # SET OPERATIONS

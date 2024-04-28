@@ -7,7 +7,7 @@ from pyspark.sql.functions import *
 
 # Initialize SparkSession with additional configurations for local run
 spark = SparkSession.builder \
-    .appName("Spark-Transformations-Cheatsheet") \
+    .appName("Spark-Transformations") \
     .config("spark.master", "local[*]") \
     .config("spark.driver.memory", "1g") \
     .config("spark.executor.memory", "2g") \

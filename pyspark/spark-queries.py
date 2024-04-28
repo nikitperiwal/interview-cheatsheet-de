@@ -6,7 +6,7 @@ from pyspark.sql.functions import *
 
 # Initialize SparkSession with additional configurations for local run
 spark = SparkSession.builder \
-    .appName("Spark-Queries-Cheatsheet") \
+    .appName("Spark-Queries") \
     .config("master", "local[*]") \
     .getOrCreate()
 

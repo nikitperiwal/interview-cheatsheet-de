@@ -3,7 +3,7 @@ from pyspark.sql.functions import broadcast
 
 # Initialize SparkSession
 spark = SparkSession.builder \
-    .appName("Spark-Join-Set-Cheatsheet") \
+    .appName("Spark-Join-Sets") \
     .config("spark.master", "local[*]") \
     .getOrCreate()
 

@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 
 # Initialize SparkSession with additional configurations for local run
 spark = SparkSession.builder \
-    .appName("Spark-Read-Write-Cheatsheet") \
+    .appName("Spark-Read-Write") \
     .config("spark.master", "local[*]") \
     .getOrCreate()
 

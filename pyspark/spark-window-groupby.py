@@ -6,7 +6,7 @@ from pyspark.sql.functions import *
 
 # Initialize SparkSession with additional configurations for local run
 spark = SparkSession.builder \
-    .appName("Spark-GroupBy-Window-Cheatsheet") \
+    .appName("Spark-GroupBy-Window") \
     .config("spark.master", "local[*]") \
     .getOrCreate()
 

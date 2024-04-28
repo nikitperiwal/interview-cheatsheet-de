@@ -3,7 +3,7 @@ from pyspark.sql.types import *
 
 # Initialize SparkSession with additional configurations for local run
 spark = SparkSession.builder \
-    .appName("Spark-RDD-Cheatsheet") \
+    .appName("Spark-RDDs") \
     .config("spark.master", "local[*]") \
     .config("spark.driver.memory", "1g") \
     .config("spark.executor.memory", "2g") \

@@ -1,9 +1,14 @@
-# Cheatsheet for Data Engineering
+# Learning Resources for Data Engineering
 
 ### DSA and Coding - For interviews
 
 - [Neetcode.io](https://neetcode.io/roadmap)
 - [Python Cheat Sheet](https://leetcode.com/discuss/study-guide/2122306/Python-Cheat-Sheet-for-Leetcode)
+
+### SQL
+
+- [Hackerrank - SQL](https://www.hackerrank.com/domains/sql)
+- [Data Lemur - SQL Interview Questions](https://datalemur.com/questions)
 
 ### Spark Architecture
 
@@ -18,6 +23,7 @@
 - [How to Optimize Your Apache Spark Application with Partitions](https://engineering.salesforce.com/how-to-optimize-your-apache-spark-application-with-partitions-257f2c1bb414/)
 - [Maximizing Spark Performance: Minimizing Shuffle Overhead](https://python.plainenglish.io/maximizing-spark-performance-minimizing-shuffle-overhead-e21b7a4e5e71)
 - [Handling Data Skew in Apache Spark](https://medium.com/@suffyan.asad1/handling-data-skew-in-apache-spark-techniques-tips-and-tricks-to-improve-performance-e2934b00b021)
+- [Adaptive Query Execution](https://www.databricks.com/blog/2020/05/29/adaptive-query-execution-speeding-up-spark-sql-at-runtime.html)
 
 ### File Formats
 
@@ -31,6 +37,7 @@
 - Data modelling
 - Schema - Snowflake, Star, etc
 - Normalisation
+- Lambda Architecture
 
 ### PySpark - Cheatsheet
 

@@ -27,6 +27,8 @@
 
 ### System Design
 
+- [Preparing for the Data Engineering System Design Interview (1/2)](https://medium.com/@seancoyne/preparing-for-the-data-engineering-system-design-interview-1-of-2-4d626a311182)
+- [Preparing for the Data Engineering System Design Interview (2/2)](https://medium.com/@seancoyne/preparing-for-the-data-engineering-system-design-interview-2-of-2-e18312ca19b3)
 - Lambda Architecture
 - Streaming in AWS?
 

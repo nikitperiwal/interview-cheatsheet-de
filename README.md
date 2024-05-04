@@ -1,6 +1,6 @@
-# Learning Resources for Data Engineering
+# Interview Cheatsheet for Data Engineering
 
-### DSA and Coding - For interviews
+### DSA and Coding
 
 - [Neetcode.io](https://neetcode.io/roadmap)
 - [Python Cheat Sheet](https://leetcode.com/discuss/study-guide/2122306/Python-Cheat-Sheet-for-Leetcode)
@@ -22,6 +22,7 @@
 - [Apache Spark Performance Boosting](https://towardsdatascience.com/apache-spark-performance-boosting-e072a3ec1179)
 - [How to Optimize Your Apache Spark Application with Partitions](https://engineering.salesforce.com/how-to-optimize-your-apache-spark-application-with-partitions-257f2c1bb414/)
 - [Maximizing Spark Performance: Minimizing Shuffle Overhead](https://python.plainenglish.io/maximizing-spark-performance-minimizing-shuffle-overhead-e21b7a4e5e71)
+- [Join Strategies in Apache Spark — A hands-on approach!](https://medium.com/@amarkrgupta96/join-strategies-in-apache-spark-a-hands-on-approach-d0696fc0a6c9)
 - [Handling Data Skew in Apache Spark](https://medium.com/@suffyan.asad1/handling-data-skew-in-apache-spark-techniques-tips-and-tricks-to-improve-performance-e2934b00b021)
 - [Adaptive Query Execution](https://www.databricks.com/blog/2020/05/29/adaptive-query-execution-speeding-up-spark-sql-at-runtime.html)
 
@@ -29,25 +30,25 @@
 
 - [Preparing for the Data Engineering System Design Interview (1/2)](https://medium.com/@seancoyne/preparing-for-the-data-engineering-system-design-interview-1-of-2-4d626a311182)
 - [Preparing for the Data Engineering System Design Interview (2/2)](https://medium.com/@seancoyne/preparing-for-the-data-engineering-system-design-interview-2-of-2-e18312ca19b3)
-- Lambda Architecture
-- Streaming in AWS?
+- [Lambda Architecture: A Big Data processing framework](https://medium.com/@vinciabhinav7/lambda-architecture-a-big-data-processing-framework-introduction-74a47bc88bd3)
 
 ### Data Modelling
 
-- Data modelling
+- Data modelling - dimensions, facts, schema?
+- Data warehouse
 - Schema - Snowflake, Star, etc
 - Normalisation
+- Elasticsearch, MongoDB, Postgres, Redshift
+- [A Data Engineer’s Guide To Nontraditional Data Storages](https://www.toptal.com/data-science/data-engineering-guide-to-storages)
+- OLAP databases - Druid, Clickhouse, Pinot, Presto
 
 ### File Formats
 
 - Storage solutions
-- What is? Blob, Block, object storage. Offerings in Cloud?
+- What is? Block, Blob & object storage. Offerincogs in Cloud?
 - What to use? Image/Unstructured storage
 - Indepth - Avro, Parquet, Orc (Orc splits)
 - Data Lakes - Pros/Cons - Delta Lake, Iceberg, Hudi
-- Elasticsearch, MongoDB, Postgres, Redshift
-- [A Data Engineer’s Guide To Nontraditional Data Storages](https://www.toptal.com/data-science/data-engineering-guide-to-storages)
-- OLAP databases - Druid, Clickhouse, Pinot, Presto
 
 ### PySpark - Cheatsheet
 

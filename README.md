@@ -31,6 +31,7 @@
 - [Preparing for the Data Engineering System Design Interview (1/2)](https://medium.com/@seancoyne/preparing-for-the-data-engineering-system-design-interview-1-of-2-4d626a311182)
 - [Preparing for the Data Engineering System Design Interview (2/2)](https://medium.com/@seancoyne/preparing-for-the-data-engineering-system-design-interview-2-of-2-e18312ca19b3)
 - [Lambda Architecture: A Big Data processing framework](https://medium.com/@vinciabhinav7/lambda-architecture-a-big-data-processing-framework-introduction-74a47bc88bd3)
+- [System Design - Checklist](system-design/system-design-checklist.md)
 
 ### Data Modelling
 

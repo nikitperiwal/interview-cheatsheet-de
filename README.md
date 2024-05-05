@@ -30,23 +30,23 @@
 
 - [Preparing for the Data Engineering System Design Interview (1/2)](https://medium.com/@seancoyne/preparing-for-the-data-engineering-system-design-interview-1-of-2-4d626a311182)
 - [Preparing for the Data Engineering System Design Interview (2/2)](https://medium.com/@seancoyne/preparing-for-the-data-engineering-system-design-interview-2-of-2-e18312ca19b3)
+- [Cracking the Data Engineering Interview: The System Design Interview](https://medium.com/@seancoyne/cracking-the-data-engineering-interview-the-system-design-interview-fcda02d95c65)
 - [Lambda Architecture: A Big Data processing framework](https://medium.com/@vinciabhinav7/lambda-architecture-a-big-data-processing-framework-introduction-74a47bc88bd3)
 - [System Design - Checklist](system-design/system-design-checklist.md)
 
 ### Data Modelling
 
-- Data modelling - dimensions, facts, schema?
-- Data warehouse
-- Schema - Snowflake, Star, etc
-- Normalisation
+- [Cracking the Data Modeling Interview: Part 1: Overview](https://medium.com/@seancoyne/cracking-the-data-modeling-interview-part-1-an-overview-b09e7d5a7938)
+- [Cracking the Data Modeling Interview: Part 2: Normalization, Indexes and Partitioning](https://medium.com/@seancoyne/cracking-the-data-modeling-interview-part-2-normalization-indexes-and-partitioning-fac334d767ca)
+- [Cracking the Data Modeling Interview: Part 3: Slowly Changing Dimensions](https://medium.com/@seancoyne/cracking-the-data-modeling-interview-part-3-slowly-changing-dimensions-e33118de7fd1)
+- [Cracking the Data Modeling Interview: Part 4: Designing Efficient Data Structures](https://medium.com/@seancoyne/cracking-the-data-modeling-interview-part-4-designing-efficient-data-structures-625a78d5fe6c)
+
+### Storage Solutions
+
 - Elasticsearch, MongoDB, Postgres, Redshift
 - [A Data Engineer’s Guide To Nontraditional Data Storages](https://www.toptal.com/data-science/data-engineering-guide-to-storages)
 - OLAP databases - Druid, Clickhouse, Pinot, Presto
-
-### File Formats
-
-- Storage solutions
-- What is? Block, Blob & object storage. Offerincogs in Cloud?
+- What is? Block, Blob & object storage. Offerings in Cloud?
 - What to use? Image/Unstructured storage
 - Indepth - Avro, Parquet, Orc (Orc splits)
 - Data Lakes - Pros/Cons - Delta Lake, Iceberg, Hudi

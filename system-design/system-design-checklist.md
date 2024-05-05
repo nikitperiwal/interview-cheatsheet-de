@@ -22,7 +22,10 @@
 ### Storage
 
 - Data size
-- Data storage - How long to keep data backup, cost
+- Frequency of access of data
+- Read speeds required
+- Cost
+- Data storage - How long to keep data backup
 
 ### Monitoring and Data Quality
 

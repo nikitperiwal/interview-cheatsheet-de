@@ -40,6 +40,7 @@
 - [Cracking the Data Modeling Interview: Part 2: Normalization, Indexes and Partitioning](https://medium.com/@seancoyne/cracking-the-data-modeling-interview-part-2-normalization-indexes-and-partitioning-fac334d767ca)
 - [Cracking the Data Modeling Interview: Part 3: Slowly Changing Dimensions](https://medium.com/@seancoyne/cracking-the-data-modeling-interview-part-3-slowly-changing-dimensions-e33118de7fd1)
 - [Cracking the Data Modeling Interview: Part 4: Designing Efficient Data Structures](https://medium.com/@seancoyne/cracking-the-data-modeling-interview-part-4-designing-efficient-data-structures-625a78d5fe6c)
+- [Data Modelling - Checklist](system-design/data-modelling-checklist.md)
 
 ### Storage Solutions
 

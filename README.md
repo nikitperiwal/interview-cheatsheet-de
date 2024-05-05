@@ -43,13 +43,12 @@
 
 ### Storage Solutions
 
-- Elasticsearch, MongoDB, Postgres, Redshift
-- [A Data Engineer’s Guide To Nontraditional Data Storages](https://www.toptal.com/data-science/data-engineering-guide-to-storages)
-- OLAP databases - Druid, Clickhouse, Pinot, Presto
 - What is? Block, Blob & object storage. Offerings in Cloud?
 - What to use? Image/Unstructured storage
 - Indepth - Avro, Parquet, Orc (Orc splits)
+- [A Data Engineer’s Guide To Nontraditional Data Storages](https://www.toptal.com/data-science/data-engineering-guide-to-storages)
 - Data Lakes - Pros/Cons - Delta Lake, Iceberg, Hudi
+- OLAP databases - Druid, Clickhouse, Pinot, Presto
 
 ### PySpark - Cheatsheet
 

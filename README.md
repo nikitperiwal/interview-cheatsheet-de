@@ -46,7 +46,7 @@
 - [Parquet, ORC, and Avro: The File Format Fundamentals of Big Data](https://www.upsolver.com/blog/the-file-format-fundamentals-of-big-data)
 - [A Data Engineer’s Guide To Nontraditional Data Storages](https://www.toptal.com/data-science/data-engineering-guide-to-storages)
 - [Open Table Formats for Efficient Data Processing: Delta Lake vs Iceberg vs Hudi](https://medium.com/starschema-blog/open-table-formats-for-efficient-data-processing-delta-lake-vs-iceberg-vs-hudi-b1107141e9a6)
-- [Comparison of the Open Source OLAP Systems for Big Data: ClickHouse, Druid, and Pinot](https://leventov.medium.com/comparison-of-the-open-source-olap-systems-for-big-data-clickhouse-druid-and-pinot-8e042a5ed1c7)
+- [Comparing Three Real-Time OLAP Databases: Apache Pinot, Apache Druid, and ClickHouse](https://startree.ai/blog/a-tale-of-three-real-time-olap-databases)
 
 ### PySpark - Cheatsheet
 

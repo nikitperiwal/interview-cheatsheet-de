@@ -31,7 +31,6 @@
 - [Preparing for the Data Engineering System Design Interview (1/2)](https://medium.com/@seancoyne/preparing-for-the-data-engineering-system-design-interview-1-of-2-4d626a311182)
 - [Preparing for the Data Engineering System Design Interview (2/2)](https://medium.com/@seancoyne/preparing-for-the-data-engineering-system-design-interview-2-of-2-e18312ca19b3)
 - [Cracking the Data Engineering Interview: The System Design Interview](https://medium.com/@seancoyne/cracking-the-data-engineering-interview-the-system-design-interview-fcda02d95c65)
-- [Lambda Architecture: A Big Data processing framework](https://medium.com/@vinciabhinav7/lambda-architecture-a-big-data-processing-framework-introduction-74a47bc88bd3)
 - [System Design - Checklist](system-design/system-design-checklist.md)
 
 ### Data Modelling
@@ -44,12 +43,10 @@
 
 ### Storage Solutions
 
-- What is? Block, Blob & object storage. Offerings in Cloud?
-- What to use? Image/Unstructured storage
-- Indepth - Avro, Parquet, Orc (Orc splits)
+- [Parquet, ORC, and Avro: The File Format Fundamentals of Big Data](https://www.upsolver.com/blog/the-file-format-fundamentals-of-big-data)
 - [A Data Engineer’s Guide To Nontraditional Data Storages](https://www.toptal.com/data-science/data-engineering-guide-to-storages)
-- Data Lakes - Pros/Cons - Delta Lake, Iceberg, Hudi
-- OLAP databases - Druid, Clickhouse, Pinot, Presto
+- [Open Table Formats for Efficient Data Processing: Delta Lake vs Iceberg vs Hudi](https://medium.com/starschema-blog/open-table-formats-for-efficient-data-processing-delta-lake-vs-iceberg-vs-hudi-b1107141e9a6)
+- [Comparison of the Open Source OLAP Systems for Big Data: ClickHouse, Druid, and Pinot](https://leventov.medium.com/comparison-of-the-open-source-olap-systems-for-big-data-clickhouse-druid-and-pinot-8e042a5ed1c7)
 
 ### PySpark - Cheatsheet
 

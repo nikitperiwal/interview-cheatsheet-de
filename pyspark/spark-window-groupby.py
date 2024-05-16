@@ -73,6 +73,8 @@ row_number_df.show()
 windowSpec = Window.orderBy("Age").rowsBetween(start=Window.unboundedPreceding, end=0)
 student_df.withColumn("Average_Age", avg("Age").over(windowSpec)).show()
 
-# TODO: Add RANGE_BETWEEN
+# Find the average age of all students within 2 years of them
+windowSpec = Window.orderBy("Age").rangeBetween(start=-2, end=2)
+student_df.withColumn("Average_Age", avg("Age").over(windowSpec)).show()
 
 # ---------------------------------------------------------------------------------------------------------------------

@@ -9,6 +9,7 @@
 
 - [Hackerrank - SQL](https://www.hackerrank.com/domains/sql)
 - [Data Lemur - SQL Interview Questions](https://datalemur.com/questions)
+- [SQL queries](sql/sql-queries.sql)
 
 ### Spark Architecture
 

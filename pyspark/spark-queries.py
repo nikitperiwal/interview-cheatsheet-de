@@ -184,12 +184,14 @@ emp_2021_df = spark.createDataFrame(emp_2021_data, columns)
 emp_2020_df.show()
 emp_2021_df.show()
 
+# Show status on each employee from year 2020 to 2021 if changed
+# If new - NEW; If resigned - RESIGNED; If designation changed - PROMOTED
 emp_2020_df.alias("a").join(emp_2021_df.alias("b"), on="emp_id", how="full_outer") \
     .filter("(a.designation != b.designation) or a.designation is null or b.designation is null") \
-    .select(coalesce(emp_2020_df["emp_id"], emp_2021_df["emp_id"]).alias("EMP_ID"),
-            when(emp_2020_df["designation"].isNull(), lit("NEW"))
-            .otherwise(when(emp_2021_df["designation"].isNull(), lit("RESIGNED"))
-                       .otherwise(lit("PROM̵OTED"))).alias("STATUS")
-            ) \
-    .show()
+    .select(
+    coalesce(emp_2020_df["emp_id"], emp_2021_df["emp_id"]).alias("EMP_ID"),
+    when(emp_2020_df["designation"].isNull(), lit("NEW"))
+    .when(emp_2021_df["designation"].isNull(), lit("RESIGNED"))
+    .otherwise(lit("PROM̵OTED")).alias("STATUS")
+).show()
 # ---------------------------------------------------------------------------------------------------------------------

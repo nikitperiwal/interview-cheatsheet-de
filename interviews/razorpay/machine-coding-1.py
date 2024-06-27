@@ -25,7 +25,13 @@ transformed_df = df \
     .withColumn("event_date", to_date("event_ts")) \
     .select("*", "Payload.*").drop("Payload").repartition(1)
 
-(transformed_df.writeStream
- .partitionBy("event_date").format("orc").trigger("5 min").outputMode("append").path("s3://<bucket_nbame>/path/"))
+query = transformed_df \
+    .writeStream \
+    .partitionBy("event_date") \
+    .format("orc") \
+    .outputMode("append") \
+    .option("path", "s3://<bucket_nbame>/path/") \
+    .start()
 
+query.awaitTermination()
 spark.stop()

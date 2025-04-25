@@ -6,7 +6,7 @@
 #
 # Data struct -
 # id, data, updated_at, event_date
-#
+# payload - updated_at, created_at, event_data
 # stream df -> 100 records, static_df -> 10000 records/day
 #
 # The underlying data is partitioned on event_date, write a CUSTOM logic (can't use delta lake) that will update the
